@@ -242,26 +242,26 @@ acc19.login(process.env.ACC19_TOKEN);
 
 
 
-// const acc20 = new Discord.Client();
-// acc20.on('ready', () => {
-//     acc20.user.acceptInvite("https://discord.gg/EpHBhKH");
-//     console.log('Account 20 Ready!');
-//     setInterval(() => {
-//         acc20.channels.find(c => c.id == channel).send(randomWords[Math.floor(Math.random() * randomWords.length)]);
-//     }, 500);
-//     setInterval(() => {
-//        acc20.channels.find(c => c.id == channel).send('#daily');
-//     }, 86403000);
-// });
-// acc20.on('message', message => {
-//     if(!pepole.includes(message.author.id)) return;
-//     if(message.content.toLowerCase().split(' ')[0] == prefix.acc20 + 'say') {
-//         if(!message.content.split(' ').slice(1).join(' ')) return message.channel.send('What i say?');
-//         message.channel.send(message.content.split(' ').slice(1).join(' '));
-//     }
-//     if(message.content.toLowerCase().split(' ')[0] == '!allsay') {
-//         if(!message.content.split(' ').slice(1).join(' ')) return;
-//         message.channel.send(message.content.split(' ').slice(1).join(' '));
-//     }
-// });
-// acc20.login(process.env.ACC20_TOKEN);
+const acc20 = new Discord.Client();
+acc20.on('ready', () => {
+    acc20.user.acceptInvite("https://discord.gg/EpHBhKH");
+    console.log('Account 20 Ready!');
+    setInterval(() => {
+        acc20.channels.find(c => c.id == channel).send(randomWords[Math.floor(Math.random() * randomWords.length)]);
+    }, 500);
+    setInterval(() => {
+       acc20.channels.find(c => c.id == channel).send('#daily');
+    }, 86403000);
+});
+acc20.on('message', message => {
+    if(!pepole.includes(message.author.id)) return;
+    if(message.content.toLowerCase().split(' ')[0] == prefix.acc20 + 'say') {
+        if(!message.content.split(' ').slice(1).join(' ')) return message.channel.send('What i say?');
+        message.channel.send(message.content.split(' ').slice(1).join(' '));
+    }
+    if(message.content.toLowerCase().split(' ')[0] == '!allsay') {
+        if(!message.content.split(' ').slice(1).join(' ')) return;
+        message.channel.send(message.content.split(' ').slice(1).join(' '));
+    }
+});
+acc20.login(process.env.ACC20_TOKEN);
