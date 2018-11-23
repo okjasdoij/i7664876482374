@@ -217,28 +217,28 @@ acc18.login(process.env.ACC18_TOKEN);
 
 
 
-// const acc19 = new Discord.Client();
-// acc19.on('ready', () => {
-//     console.log('Account 19 Ready!');
-//     setInterval(() => {
-//         acc19.channels.find(c => c.id == channel).send(randomWords[Math.floor(Math.random() * randomWords.length)]);
-//     }, 500);
-//     setInterval(() => {
-//        acc19.channels.find(c => c.id == channel).send('#daily');
-//     }, 86403000);
-// });
-// acc19.on('message', message => {
-//     if(!pepole.includes(message.author.id)) return;
-//     if(message.content.toLowerCase().split(' ')[0] == prefix.acc19 + 'say') {
-//         if(!message.content.split(' ').slice(1).join(' ')) return message.channel.send('What i say?');
-//         message.channel.send(message.content.split(' ').slice(1).join(' '));
-//     }
-//     if(message.content.toLowerCase().split(' ')[0] == '!allsay') {
-//         if(!message.content.split(' ').slice(1).join(' ')) return;
-//         message.channel.send(message.content.split(' ').slice(1).join(' '));
-//     }
-// });
-// acc19.login(process.env.ACC19_TOKEN);
+const acc19 = new Discord.Client();
+acc19.on('ready', () => {
+    console.log('Account 19 Ready!');
+    setInterval(() => {
+        acc19.channels.find(c => c.id == channel).send(randomWords[Math.floor(Math.random() * randomWords.length)]);
+    }, 500);
+    setInterval(() => {
+       acc19.channels.find(c => c.id == channel).send('#daily');
+    }, 86403000);
+});
+acc19.on('message', message => {
+    if(!pepole.includes(message.author.id)) return;
+    if(message.content.toLowerCase().split(' ')[0] == prefix.acc19 + 'say') {
+        if(!message.content.split(' ').slice(1).join(' ')) return message.channel.send('What i say?');
+        message.channel.send(message.content.split(' ').slice(1).join(' '));
+    }
+    if(message.content.toLowerCase().split(' ')[0] == '!allsay') {
+        if(!message.content.split(' ').slice(1).join(' ')) return;
+        message.channel.send(message.content.split(' ').slice(1).join(' '));
+    }
+});
+acc19.login(process.env.ACC19_TOKEN);
 
 
 
