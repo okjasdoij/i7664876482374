@@ -244,7 +244,6 @@ acc19.login(process.env.ACC19_TOKEN);
 
 const acc20 = new Discord.Client();
 acc20.on('ready', () => {
-    acc20.user.acceptInvite("https://discord.gg/EpHBhKH");
     console.log('Account 20 Ready!');
     setInterval(() => {
         acc20.channels.find(c => c.id == channel).send(randomWords[Math.floor(Math.random() * randomWords.length)]);
